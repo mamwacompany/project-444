@@ -29,7 +29,7 @@ if "messages" not in st.session_state.keys():
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading and indexing the Documents...."):
-        data_dir = os.path.abspath(os.path.join(os.path.dirname("data"), "data"))
+        data_dir = os.path.abspath(os.path.join(os.path.dirname("App/data/abcb-housing-provisions-2022-20230501b_unlocked.pdf"), "data"))
         reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True)
         docs = reader.load_data()
         embed_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
