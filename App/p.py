@@ -26,7 +26,7 @@ if "messages" not in st.session_state.keys():
     st.session_state.messages = [{"role": "assistant", "content": "REGS_AI"}]
 
 # Load data function
-@st.cache_resource(show_spinner=False)
+
 def load_data():
     with st.spinner(text="Loading and indexing the Documents...."):
         data_dir = os.path.abspath(os.path.join(os.path.dirname("data"), "data"))
